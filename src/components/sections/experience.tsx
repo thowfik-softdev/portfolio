@@ -2,15 +2,15 @@ import { experiences } from "@/data/portfolio";
 
 export default function Experience() {
   return (
-    <section id="experience" className="max-w-5xl mx-auto px-6 py-16">
-      <div className="editorial-rule-double mb-8" />
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+    <section id="experience" className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+      <div className="editorial-rule-double mb-6 sm:mb-8" />
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-8 md:gap-12">
         {/* Section title */}
         <div className="md:col-span-3">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold sticky top-28">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold md:sticky md:top-28">
             Experience
           </h2>
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-1">
+          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-1 mb-4 md:mb-0">
             Career Timeline
           </p>
         </div>
@@ -21,10 +21,10 @@ export default function Experience() {
             {experiences.map((exp, index) => (
               <article
                 key={index}
-                className="relative border-b border-border pb-8 mb-8 last:border-b-0 last:pb-0 last:mb-0"
+                className="relative border-b border-border pb-6 sm:pb-8 mb-6 sm:mb-8 last:border-b-0 last:pb-0 last:mb-0"
               >
                 {/* Period badge */}
-                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+                <div className="flex flex-wrap items-baseline gap-x-3 sm:gap-x-4 gap-y-1 mb-2 sm:mb-3">
                   <span className="text-xs tracking-[0.2em] uppercase font-semibold bg-primary text-primary-foreground px-2 py-0.5">
                     {exp.period}
                   </span>
@@ -34,15 +34,15 @@ export default function Experience() {
                 </div>
 
                 {/* Title & Company */}
-                <h3 className="font-heading text-xl md:text-2xl font-bold leading-tight">
+                <h3 className="font-heading text-lg sm:text-xl md:text-2xl font-bold leading-tight">
                   {exp.title}
                 </h3>
-                <p className="font-serif text-sm text-muted-foreground italic mt-1 mb-3">
+                <p className="font-serif text-sm text-muted-foreground italic mt-1 mb-2 sm:mb-3">
                   {exp.company}
                 </p>
 
                 {/* Description */}
-                <p className="font-serif text-sm leading-relaxed text-muted-foreground mb-4">
+                <p className="font-serif text-sm leading-relaxed text-muted-foreground mb-3 sm:mb-4">
                   {exp.description}
                 </p>
 
@@ -51,7 +51,7 @@ export default function Experience() {
                   {exp.highlights.map((highlight, i) => (
                     <li
                       key={i}
-                      className="text-sm text-foreground flex items-start gap-2"
+                      className="text-xs sm:text-sm text-foreground flex items-start gap-2"
                     >
                       <span className="text-muted-foreground mt-0.5 shrink-0">
                         ✦

@@ -2,13 +2,13 @@ import { siteConfig, navLinks, socialLinks } from "@/data/portfolio";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border mt-20">
-      <div className="max-w-5xl mx-auto px-6">
+    <footer className="border-t border-border mt-12 sm:mt-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="editorial-rule-double" />
 
-        <div className="py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+        <div className="py-8 sm:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm">
           {/* Column 1 */}
-          <div>
+          <div className="sm:col-span-2 md:col-span-1">
             <h4 className="font-heading text-lg font-bold mb-3">
               {siteConfig.name}
             </h4>
@@ -23,7 +23,7 @@ export default function Footer() {
             <h4 className="text-xs tracking-[0.2em] uppercase font-semibold mb-3">
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="grid grid-cols-2 sm:grid-cols-1 gap-y-2 gap-x-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
