@@ -83,12 +83,15 @@ export default function MobileNav() {
             key={item.href}
             href={item.href}
             onClick={(e) => handleClick(e, item.href)}
-            className={`flex flex-col items-center gap-0.5 py-2 px-3 min-w-0 transition-colors duration-200 ${
+            className={`relative flex flex-col items-center gap-0.5 py-2 px-3 min-w-0 transition-colors duration-200 ${
               active === item.href
                 ? "text-foreground"
                 : "text-muted-foreground"
             }`}
           >
+            {active === item.href && (
+              <span className="absolute top-0 left-2 right-2 h-0.5 bg-foreground rounded-full" />
+            )}
             {item.icon}
             <span className="text-[10px] tracking-wide font-medium">
               {item.label}
