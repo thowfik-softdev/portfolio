@@ -52,7 +52,7 @@ export const about = {
   paragraphs: [
     "I am a software engineer with experience building production web applications across real client projects. I started my career with a ServiceNow internship at AVASOFT, where I got my first exposure to enterprise software development, before moving into software engineering.",
     "At Sanyaa Infotech, I worked on three client projects: UAE BodyFlying Association, Cell Health, and the Sanyaa company website. Across these I built complex role-based systems, multi-dashboard admin panels, e-commerce features, and automated email workflows, working remotely in an agile team.",
-    "I currently work at Hala Saudi on a travel-tech platform covering the Middle East. My focus has been on ABAC and RBAC across a multi-portal system, Stripe payment integration with global currency management, financial reconciliation with resolution workflows, and a wallet system tied to live payment outcomes.",
+    "I currently work at Hala Saudi across two products: a B2B travel platform covering the Middle East and a Property Management System built for the Saudi hospitality market. My work spans ABAC and RBAC across multi-portal systems, Stripe payment integration, financial reconciliation, wallet systems, and ZATCA Phase-2 e-invoicing compliance.",
     "I graduated in Computer Science with a Web Development specialization from St. Joseph College of Arts & Science, Cuddalore in 2023. I enjoy working across the full stack and am always looking to take on problems that push what I know.",
   ],
 } as const;
@@ -178,6 +178,143 @@ export const skillCategories = [
 
 export const projects = [
   {
+    title: "Hala Saudi Travel Platform",
+    description:
+      "A multi-service B2B travel management platform enabling travel agencies in Saudi Arabia to search, book, and manage travel products through a unified system with wallet-based payments, team management, and real-time notifications.",
+    tech: ["Next.js", "NestJS", "PostgreSQL", "Stripe", "GCP"],
+    year: "2025",
+    link: "#",
+    details: {
+      modules: [
+        {
+          id: "01",
+          title: "Agency Portal",
+          description:
+            "Customer-facing portal for travel agencies to search and book travel products across 5 verticals: flights, hotels, transfers, activities, and packages.",
+          highlights: [
+            "Wallet-based payment system with top-ups, ledger, and approval workflows",
+            "Marketplace for purchasing travel products",
+            "Team management with role-based permissions and audit logging",
+            "Full Arabic (RTL) and English internationalization",
+          ],
+          tech: ["Next.js", "React", "TypeScript", "TanStack Query", "Tailwind CSS", "Radix UI", "Framer Motion", "Sentry"],
+        },
+        {
+          id: "02",
+          title: "Admin Portal",
+          description:
+            "Internal operations dashboard for managing agencies, contracts, finances, and catalog.",
+          highlights: [
+            "Hotel contract management with negotiation workflows",
+            "Financial operations: wallet management, reconciliation, refund processing",
+            "Agency onboarding and approval workflows",
+            "Admin user management with permission-based access control",
+          ],
+          tech: ["Next.js", "React", "TypeScript", "TanStack Query", "Tiptap", "Recharts", "next-intl"],
+        },
+        {
+          id: "03",
+          title: "Notification Microservice",
+          description:
+            "Event-driven multi-channel notification engine supporting email, SMS, push, and in-app notifications.",
+          highlights: [
+            "Processes 25+ domain events via Google Cloud Pub/Sub",
+            "Dynamic template system with Handlebars, supporting bilingual content (AR/EN)",
+            "Circuit breaker pattern for resilience, idempotency for deduplication",
+            "Per-agency notification preference management",
+          ],
+          tech: ["NestJS", "PostgreSQL", "Prisma", "Google Cloud Pub/Sub", "Winston", "Jest"],
+        },
+        {
+          id: "04",
+          title: "Core Backend API",
+          description:
+            "Multi-tenant B2B travel platform backend serving both the Agency and Hub portals.",
+          highlights: [
+            "Multi-provider hotel integration with adapter pattern (WebBeds, custom contract CMS)",
+            "Wallet and payments: double-entry ledger, Stripe integration, two-phase purchase locking",
+            "RBAC + ABAC authorization across 3 realms (Platform, Hub, Agency)",
+            "Event-driven architecture using outbox pattern to Google Cloud Pub/Sub",
+            "Real-time updates via Server-Sent Events (SSE)",
+            "Comprehensive audit logging for all operations",
+          ],
+          tech: ["NestJS", "PostgreSQL", "Prisma", "Redis", "Stripe", "GCP", "JWT/Passport", "Jest"],
+        },
+      ],
+    },
+  },
+  {
+    title: "Property Management System",
+    description:
+      "A cloud-based Property Management System built for the Saudi Arabian hospitality market. Enables hotel operators to manage properties, bookings, guests, and finances while meeting Vision 2030 regulatory requirements including ZATCA e-invoicing, Shomoos guest reporting, and NTMP tourism monitoring.",
+    tech: ["Next.js", "NestJS", "PostgreSQL", "Redis", "Stripe", "GCP"],
+    year: "2025",
+    link: "#",
+    details: {
+      modules: [
+        {
+          id: "01",
+          title: "Core Property Management",
+          description:
+            "End-to-end management of properties, rooms, bookings, and guests across single and multi-property hotel operations.",
+          highlights: [
+            "Property and room management with availability, rates, and configuration",
+            "Booking and reservation management with real-time inventory control",
+            "Guest management with profile history, preferences, and stay records",
+            "Housekeeping and operations scheduling with staff task management",
+            "Group bookings and event management for large reservations",
+            "Reporting and analytics dashboard for operational insights",
+          ],
+          tech: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Redis"],
+        },
+        {
+          id: "02",
+          title: "Financial & Tax Compliance",
+          description:
+            "Complete financial operations covering billing, payments, and full compliance with Saudi Arabian tax regulations.",
+          highlights: [
+            "Financial management and billing with automated invoice generation",
+            "Single-handedly implemented ZATCA Phase-2 e-invoicing compliance for Saudi tax authority requirements",
+            "Payment gateway integration with multi-method support",
+            "Revenue and pricing management with dynamic rate strategies",
+            "POS integration for on-property purchases and services",
+          ],
+          tech: ["Stripe", "ZATCA API", "NestJS", "PostgreSQL", "Prisma"],
+        },
+        {
+          id: "03",
+          title: "AI & Guest Intelligence",
+          description:
+            "AI-powered features that enhance guest experience, automate communication, and optimize revenue through intelligent insights.",
+          highlights: [
+            "AI-powered guest review intelligence for sentiment analysis and feedback processing",
+            "AI guest concierge chatbot for 24/7 automated guest support",
+            "AI revenue management for dynamic pricing recommendations",
+            "CRM and guest intelligence with segmentation and loyalty tracking",
+            "Multi-channel messaging via WhatsApp and SMS for guest communication",
+          ],
+          tech: ["NestJS", "GCP", "PostgreSQL", "WhatsApp API"],
+        },
+        {
+          id: "04",
+          title: "Distribution & Regulatory Integrations",
+          description:
+            "Full distribution stack and Saudi government regulatory integrations required for compliant hotel operations.",
+          highlights: [
+            "Channel manager and OTA distribution to connect with booking platforms",
+            "Direct booking engine for hotel websites",
+            "Guest self-service portal for online check-in, requests, and payments",
+            "Shomoos integration for MOI guest identity reporting",
+            "NTMP integration for Saudi tourism monitoring compliance",
+            "Mobile staff application (PWA) for on-property team operations",
+            "Multi-tenancy and organization management for property groups",
+          ],
+          tech: ["Next.js", "NestJS", "GCP", "Shomoos API", "NTMP API", "PWA"],
+        },
+      ],
+    },
+  },
+  {
     title: "UAE BodyFlying Association",
     description:
       "A full-stack platform for the UAE tunnel flight community built with Next.js. Features a 5-level role hierarchy (Flyer, Instructor, Coach, Trainer, Examiner, and Admin) with role-specific dashboards, dynamic membership cards, skill progress tracking, and a three-tier logbook currency system. Includes automated email notifications for role changes and approvals, Redux global state management, and a searchable member directory.",
@@ -198,14 +335,6 @@ export const projects = [
     description:
       "Built the official company website independently from end to end. A five-page site covering Home, About, Services, Portfolio, and Contact, with EmailJS powering automated consultation form submissions and WhatsApp redirection for direct client inquiries.",
     tech: ["Next.js", "Tailwind CSS", "EmailJS"],
-    year: "2024",
-    link: "#",
-  },
-  {
-    title: "Hala Saudi Travel Platform",
-    description:
-      "A large-scale travel-tech platform serving users across the Middle East. Designed a multi-portal architecture with Customer, Agency, and Internal portals powered by a single NestJS backend with ABAC and RBAC. Single-handedly integrated Stripe payments with global currency management. Built the complete financial reconciliation pipeline with resolution workflows and a wallet system that reflects payment outcomes in real time. Developed dynamic pages for destinations, tours, events, holidays, stays, and an AI trip planner.",
-    tech: ["Next.js", "NestJS", "PostgreSQL", "Stripe", "GCP"],
     year: "2024",
     link: "#",
   },
