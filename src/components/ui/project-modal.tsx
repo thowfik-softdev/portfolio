@@ -32,7 +32,7 @@ export default function ProjectModal({ title, modules, onClose }: ProjectModalPr
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center"
+      className="fixed inset-0 z-[70] flex items-center justify-center px-4 py-6"
       aria-modal="true"
       role="dialog"
     >
@@ -43,7 +43,7 @@ export default function ProjectModal({ title, modules, onClose }: ProjectModalPr
       />
 
       {/* Modal */}
-      <div className="relative z-10 bg-background w-full sm:max-w-3xl sm:mx-4 max-h-[92vh] sm:max-h-[85vh] flex flex-col border border-border">
+      <div className="relative z-10 bg-background w-full sm:max-w-3xl max-h-[82vh] flex flex-col border border-border">
         {/* Header */}
         <div className="flex items-start justify-between px-5 sm:px-8 py-5 border-b border-border shrink-0">
           <div>

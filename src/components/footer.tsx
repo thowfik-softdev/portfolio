@@ -2,7 +2,7 @@ import { siteConfig, navLinks, socialLinks } from "@/data/portfolio";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border mt-12 sm:mt-20">
+    <footer className="border-t border-border mt-12 sm:mt-20 pb-24 md:pb-0">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="editorial-rule-double" />
 
