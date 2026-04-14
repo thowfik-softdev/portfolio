@@ -101,7 +101,12 @@
   }
   @media (min-width: 768px) {
     section[id] {
-      scroll-margin-top: 6rem;
+      scroll-margin-top: 10rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    section[id] {
+      scroll-margin-top: 12rem;
     }
   }
 }

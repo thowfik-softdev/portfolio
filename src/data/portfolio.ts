@@ -1,19 +1,18 @@
 // ============================================================
-// Portfolio Data — Single source of truth for all content
+// Portfolio Data - Single source of truth for all content
 // Edit this file to update any text across the portfolio.
 // ============================================================
 
 export const siteConfig = {
   name: "Thowfik Juhair",
-  title: "Portfolio — Professional Experience & Work",
+  title: "Portfolio: Professional Experience & Work",
   description:
     "A professional portfolio showcasing experience, skills, and projects. Built with a newspaper-inspired editorial design.",
   tagline:
     "Software Engineer · React & Next.js · NestJS · Building Scalable Web Applications",
-  email: "thowfikjuhair@gmail.com",
+  email: "thowfik.softdev@gmail.com",
   location: "Greater Chennai Area, India",
   availability: "Open to opportunities",
-  projectsDelivered: "15+",
 } as const;
 
 export const socialLinks = [
@@ -21,8 +20,7 @@ export const socialLinks = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/thowfik-juhair",
   },
-  { label: "GitHub", href: "https://github.com" },
-  { label: "Twitter / X", href: "https://twitter.com" },
+  { label: "GitHub", href: "https://github.com/thowfik-softdev" },
 ] as const;
 
 export const navLinks = [
@@ -37,7 +35,7 @@ export const navLinks = [
 // ---- Hero ----
 
 export const hero = {
-  badge: "✦ Featured Profile",
+  badge: "Featured Profile",
   headline: ["Engineering", "Scalable Web"],
   headlineItalic: "Applications",
   summary:
@@ -52,10 +50,10 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    "I am a full-stack software engineer with hands-on experience building scalable, production-ready web applications. My journey into software development started with a genuine curiosity for how technology shapes everyday experiences — and that drive continues to fuel my work today.",
-    "Currently working at Hala Saudi, I contribute to a large-scale travel-tech platform where I architect and develop critical systems spanning payment processing with Stripe, automated financial reconciliation, multi-currency settlement calculations, and enterprise-grade role-based access control. I work across the full stack — from building responsive, high-performance frontends with React and Next.js to designing robust backend APIs with NestJS and PostgreSQL.",
-    "I believe the best software is built at the intersection of clean architecture and pragmatic engineering. My approach emphasizes maintainable code, scalable system design, and thoughtful user experiences. Whether it is optimizing a complex reconciliation pipeline or crafting an intuitive admin dashboard, I focus on delivering solutions that are both technically excellent and genuinely useful.",
-    "I graduated from St. Joseph College of Arts & Science in Cuddalore, where I built the foundation for my career in computer science. I am always looking to grow — whether through open-source contributions, connecting with fellow developers, or tackling new challenges that push the boundaries of what I can build.",
+    "I am a software engineer with experience building production web applications across real client projects. I started my career with a ServiceNow internship at AVASOFT, where I got my first exposure to enterprise software development, before moving into software engineering.",
+    "At Sanyaa Infotech, I worked on three client projects: UAE BodyFlying Association, Cell Health, and the Sanyaa company website. Across these I built complex role-based systems, multi-dashboard admin panels, e-commerce features, and automated email workflows, working remotely in an agile team.",
+    "I currently work at Hala Saudi on a travel-tech platform covering the Middle East. My focus has been on ABAC and RBAC across a multi-portal system, Stripe payment integration with global currency management, financial reconciliation with resolution workflows, and a wallet system tied to live payment outcomes.",
+    "I graduated in Computer Science with a Web Development specialization from St. Joseph College of Arts & Science, Cuddalore in 2023. I enjoy working across the full stack and am always looking to take on problems that push what I know.",
   ],
 } as const;
 
@@ -65,34 +63,47 @@ export const experiences = [
   {
     title: "Software Engineer",
     company: "Hala Saudi",
-    period: "2024 — Present",
-    location: "Remote · Greater Chennai Area",
+    period: "Sep 2025 - Present",
+    location: "Chennai, India · On-site",
     description:
-      "Spearheading the development of a large-scale travel-tech platform serving thousands of users across the Middle East. Working across the entire product stack — from building dynamic, responsive frontends to architecting robust backend services — delivering production-grade features that directly impact revenue and operational efficiency.",
+      "Building a large-scale travel-tech platform serving users across the Middle East. Responsible for both frontend and backend development across a multi-portal product (Customer, Agency, and Internal portals) all powered by a single NestJS backend.",
     highlights: [
-      "Architected and implemented end-to-end Stripe payment integration including webhook handling, real-time payment status tracking, and secure transaction processing for the entire booking flow",
-      "Designed and built an automated financial reconciliation system that processes daily settlement data, matches transactions across multiple payment providers, and generates comprehensive audit reports — reducing manual reconciliation effort by 90%",
-      "Engineered multi-currency settlement calculations with real-time AED-to-SAR exchange rate conversion using Stripe's financial APIs, ensuring accurate cross-border revenue reporting",
-      "Built a comprehensive Role-Based Access Control (RBAC) system with a three-collection architecture (Module, Sidebar, AccessMatrix) supporting multiple organizational realms — Customer, Internal, and Agency — enabling fine-grained permission management across the platform",
-      "Developed automated wallet adjustment systems that calculate and apply financial corrections based on reconciliation resolutions, eliminating manual intervention and reducing processing errors",
-      "Implemented agency management module with full CRUD operations, enabling travel agency owners to manage profiles, configure settings, and oversee bookings through a dedicated admin interface",
-      "Leveraged Google Cloud Tasks for asynchronous processing of reconciliation jobs, ensuring reliable execution of complex financial workflows at scale",
-      "Built responsive admin dashboards and timeline views for monitoring reconciliation statuses, transaction histories, and settlement breakdowns across multiple payment providers",
+      "Designed and implemented ABAC and RBAC systems supporting multiple portals with a single backend codebase, enabling fine-grained permission management across all user types",
+      "Single-handedly integrated Stripe payments with global currency management, handling the complete booking payment flow end to end",
+      "Built a full financial reconciliation pipeline with resolution workflows, ensuring accurate settlement tracking across transactions",
+      "Integrated a wallet system within the application that reflects payment outcomes in real time, allowing users to manage balances and apply credits to bookings",
+      "Developed dynamic pages for destinations, tours, events, holidays, stays, and an AI trip planner with itinerary generation",
+      "Integrated Dropzone for multi-image uploads and Google Maps for location-based navigation within destination pages",
+      "Managed GitHub workflows including branch creation, pull request reviews, merge conflict resolution, and CI/CD automation via GitHub Actions",
     ],
   },
   {
-    title: "Full Stack Developer",
-    company: "Freelance & Projects",
-    period: "2022 — 2024",
-    location: "Chennai, India",
+    title: "Junior Full Stack Developer",
+    company: "Sanyaa Infotech",
+    period: "Sep 2024 - Aug 2025",
+    location: "Greater Bengaluru Area · Remote",
     description:
-      "Built modern web applications for clients across diverse industries, developing expertise in the React/Next.js ecosystem and backend development with Node.js. Focused on delivering clean, performant applications with scalable architectures.",
+      "Worked across three client projects covering the full development lifecycle, from architecture analysis and wireframing through to deployment. Gained deep experience building scalable Next.js applications with complex role systems, admin dashboards, and third-party integrations.",
     highlights: [
-      "Developed multiple client-facing applications using React and Next.js with server-side rendering and optimized performance scores",
-      "Designed and implemented RESTful APIs with Express.js and NestJS, following clean architecture principles",
-      "Integrated MongoDB and PostgreSQL databases with Prisma ORM for type-safe data access and migrations",
-      "Implemented authentication flows, payment integrations, and real-time features across projects",
-      "Delivered responsive, mobile-first designs using Tailwind CSS with pixel-perfect UI implementations",
+      "Built the UAE BodyFlying Association platform with a 5-level role hierarchy (Flyer, Instructor, Coach, Trainer, Examiner, Admin), each with a dedicated dashboard and scoped permissions",
+      "Implemented skill progress tracking, a three-tier logbook system, and role upgrade request flows with automated email notifications",
+      "Developed a dynamic membership card, searchable member directory, and Redux-powered real-time notification system for skill, currency, and role requests",
+      "Built Cell Health, an e-commerce admin platform with product management, a Daily Deals system, and a stock alert module that surfaces low-stock items automatically",
+      "Integrated WhatsApp support, image compression with background removal, and session management for Cell Health",
+      "Independently developed the Sanyaa Infotech company website (5 pages) with EmailJS for automated consultation form submissions",
+    ],
+  },
+  {
+    title: "ServiceNow Developer Intern",
+    company: "AVASOFT",
+    period: "Mar 2024 - Jun 2024",
+    location: "Chennai, India · On-site",
+    description:
+      "Completed a 4-month internship focused on the ServiceNow platform, gaining hands-on experience with both server-side and client-side development.",
+    highlights: [
+      "Worked on multiple version and patch upgrades following ServiceNow best practices",
+      "Developed custom solutions using Business Rules, Script Includes, and Fix Scripts",
+      "Gained practical experience with SLAs, ACLs, Notifications, Events, Service Portals, and Catalog Item creation",
     ],
   },
 ] as const;
@@ -100,16 +111,16 @@ export const experiences = [
 // ---- Education ----
 
 export const education = {
-  degree: "Bachelor of Computer Science",
+  degree: "Bachelor of Computer Science, Web Development",
   institution: "St. Joseph College of Arts & Science (Autonomous)",
-  period: "2019 — 2022",
+  period: "Jun 2020 - May 2023",
   location: "Cuddalore, India",
   description:
-    "Studied computer science fundamentals including data structures, algorithms, database management, and software engineering. Built a strong academic foundation while actively pursuing web development through self-directed learning and personal projects.",
+    "Studied computer science fundamentals with a specialization in web development, covering programming languages, HTML, CSS, JavaScript, and database management. Graduated with a solid foundation in both software engineering principles and practical web development skills.",
   highlights: [
-    "Developed web applications as academic projects using modern JavaScript frameworks",
-    "Built strong foundations in data structures, algorithms, and database design",
-    "Actively participated in coding workshops and hackathons",
+    "Specialized in web development alongside core computer science fundamentals",
+    "Built foundational knowledge in programming languages including Python and Java",
+    "Studied database management, algorithms, and data structures",
   ],
 } as const;
 
@@ -136,10 +147,8 @@ export const skillCategories = [
       "NestJS",
       "Express.js",
       "REST APIs",
-      "GraphQL",
       "Prisma ORM",
       "Webhooks",
-      "Microservices",
     ],
   },
   {
@@ -147,10 +156,8 @@ export const skillCategories = [
     skills: [
       "PostgreSQL",
       "MongoDB",
-      "Redis",
       "Google Cloud Platform",
       "Cloud Tasks",
-      "Docker",
       "CI/CD",
       "Git",
     ],
@@ -161,11 +168,8 @@ export const skillCategories = [
       "Stripe Payments",
       "Payment Reconciliation",
       "RBAC Systems",
+      "Redux",
       "Agile / Scrum",
-      "System Design",
-      "Code Review",
-      "Performance Optimization",
-      "API Design",
     ],
   },
 ] as const;
@@ -174,34 +178,34 @@ export const skillCategories = [
 
 export const projects = [
   {
-    title: "Travel Booking Platform",
+    title: "UAE BodyFlying Association",
     description:
-      "A comprehensive travel-tech platform enabling users to discover, book, and manage travel experiences across the Middle East. Features end-to-end payment processing, real-time booking management, and multi-role admin dashboards for agencies and internal teams.",
+      "A full-stack platform for the UAE tunnel flight community built with Next.js. Features a 5-level role hierarchy (Flyer, Instructor, Coach, Trainer, Examiner, and Admin) with role-specific dashboards, dynamic membership cards, skill progress tracking, and a three-tier logbook currency system. Includes automated email notifications for role changes and approvals, Redux global state management, and a searchable member directory.",
+    tech: ["Next.js", "Redux", "MongoDB", "Tailwind CSS"],
+    year: "2024",
+    link: "#",
+  },
+  {
+    title: "Cell Health",
+    description:
+      "An e-commerce platform with a dual Home and Admin layout. Built product management with search, sort, filter, and pagination, a Daily Deals system, and a stock management module with low-stock alerts that surface items automatically for restocking. Integrated WhatsApp support, image compression with background removal, session management, and mobile-responsive off-canvas components.",
+    tech: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
+    year: "2024",
+    link: "#",
+  },
+  {
+    title: "Sanyaa Infotech Website",
+    description:
+      "Built the official company website independently from end to end. A five-page site covering Home, About, Services, Portfolio, and Contact, with EmailJS powering automated consultation form submissions and WhatsApp redirection for direct client inquiries.",
+    tech: ["Next.js", "Tailwind CSS", "EmailJS"],
+    year: "2024",
+    link: "#",
+  },
+  {
+    title: "Hala Saudi Travel Platform",
+    description:
+      "A large-scale travel-tech platform serving users across the Middle East. Designed a multi-portal architecture with Customer, Agency, and Internal portals powered by a single NestJS backend with ABAC and RBAC. Single-handedly integrated Stripe payments with global currency management. Built the complete financial reconciliation pipeline with resolution workflows and a wallet system that reflects payment outcomes in real time. Developed dynamic pages for destinations, tours, events, holidays, stays, and an AI trip planner.",
     tech: ["Next.js", "NestJS", "PostgreSQL", "Stripe", "GCP"],
-    year: "2024",
-    link: "#",
-  },
-  {
-    title: "Financial Reconciliation Engine",
-    description:
-      "An automated system that reconciles payment settlements across multiple providers, performs multi-currency conversions, generates audit-ready reports, and handles wallet adjustments — processing thousands of transactions with precision.",
-    tech: ["NestJS", "Prisma", "Cloud Tasks", "Stripe API", "PostgreSQL"],
-    year: "2024",
-    link: "#",
-  },
-  {
-    title: "Enterprise RBAC System",
-    description:
-      "A three-collection role-based access control architecture supporting Customer, Internal, and Agency realms. Includes module capability registry, dynamic sidebar navigation, and granular permission matrices for secure multi-tenant access.",
-    tech: ["NestJS", "React", "PostgreSQL", "Prisma", "TypeScript"],
-    year: "2024",
-    link: "#",
-  },
-  {
-    title: "Agency Management Portal",
-    description:
-      "A dedicated admin interface for travel agency owners to manage their profiles, configure business settings, oversee bookings, and track commissions. Built with responsive design and real-time data updates.",
-    tech: ["React", "Next.js", "NestJS", "Tailwind CSS", "REST API"],
     year: "2024",
     link: "#",
   },
@@ -211,6 +215,6 @@ export const projects = [
 
 export const contact = {
   message:
-    "I am always open to discussing new opportunities, interesting projects, or potential collaborations. Whether you are looking for a full-stack developer or just want to connect over shared interests in technology, I would love to hear from you.",
-  ctaText: "Send an Email →",
+    "I am always open to discussing new opportunities, interesting projects, or potential collaborations. Whether you are looking for a software engineer or just want to connect over shared interests in technology, I would love to hear from you.",
+  ctaText: "Send an Email",
 } as const;
